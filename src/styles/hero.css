@@ -1,0 +1,31 @@
+.hero__container {
+  padding-top: 181px;
+  position: relative;
+}
+.hero__logo {
+  margin-bottom: 32px;
+}
+.hero__title {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  letter-spacing: 0.16em;
+  color: #2C3F68;
+  text-transform: uppercase;
+  margin-bottom: 29px;
+}
+.hero__descr {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  max-width: 571px;
+  color: #3F3F3F;
+}
+.hero__video {
+  position: absolute;
+  top: -60px;
+  right: -416px;
+  z-index: -1;
+  max-width: 1220px;
+  max-height: 644px;
+}

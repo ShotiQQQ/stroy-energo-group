@@ -1,0 +1,36 @@
+@import "vars";
+@import "mixins";
+
+.hero {
+  &__container {
+    padding-top: 181px;
+    position: relative;
+  }
+  &__logo {
+    margin-bottom: 32px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    letter-spacing: 0.16em;
+    color: $title;
+    text-transform: uppercase;
+    margin-bottom: 29px;
+  }
+  &__descr {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    max-width: 571px;
+    color: $text-dark;
+  }
+  &__video {
+    position: absolute;
+    top: -60px;
+    right: -416px;
+    z-index: -1;
+    max-width: 1220px;
+    max-height: 644px;
+  }
+}

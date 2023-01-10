@@ -1,0 +1,27 @@
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 36px;
+}
+.header__list {
+  display: flex;
+}
+.header__item:not(:last-child) {
+  margin-right: 31px;
+}
+.header__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #FFF;
+  letter-spacing: 0.16em;
+}
+.header__tel {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #FFF;
+}
