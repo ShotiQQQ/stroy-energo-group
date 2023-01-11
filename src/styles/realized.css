@@ -1,0 +1,50 @@
+.realized {
+  background-color: #EEE;
+}
+.realized__container {
+  padding-top: 85px;
+  padding-bottom: 76px;
+}
+.realized__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 49px;
+}
+.realized__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.realized__imgs {
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 27px;
+}
+.realized__img {
+  width: calc(50% - 5px);
+}
+.realized__text--top {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+.realized__text--bottom {
+  display: flex;
+}
+.realized__name {
+  margin-right: 25px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 19px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.realized__object {
+  max-width: 878px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.realized__work {
+  font-weight: 500;
+  font-size: 16px;
+}

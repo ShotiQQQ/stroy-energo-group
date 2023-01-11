@@ -35,8 +35,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
-  background: $bg-body;
-  background-repeat: no-repeat;
   overflow-x: hidden;
 }
 
@@ -57,6 +55,37 @@ html {
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 38px;
+  line-height: 46px;
+  letter-spacing: 0.16em;
+  color: $title;
+  text-transform: uppercase;
+  margin-bottom: 29px;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 31px;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 27px;
 }
 
 a {
@@ -82,4 +111,17 @@ ul {
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
+}
+
+.button {
+  width: 22px;
+  height: 35px;
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  &--prev {
+    transform: rotate(180deg);
+    margin-right: 20px;
+  }
 }

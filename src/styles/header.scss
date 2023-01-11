@@ -2,6 +2,29 @@
 @import "mixins";
 
 .header {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -318px;
+    left: 0;
+    z-index: -1;
+    background: $bg-top;
+    background-repeat: no-repeat;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -1800px;
+    left: 0;
+    z-index: -2;
+    background: $bg-bottom;
+    background-repeat: no-repeat;
+  }
   &__container {
     display: flex;
     justify-content: space-between;

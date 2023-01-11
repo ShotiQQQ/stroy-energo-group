@@ -2,21 +2,13 @@
 @import "mixins";
 
 .hero {
+  margin-bottom: 219px;
   &__container {
     padding-top: 181px;
     position: relative;
   }
   &__logo {
     margin-bottom: 32px;
-  }
-  &__title {
-    font-weight: 700;
-    font-size: 38px;
-    line-height: 46px;
-    letter-spacing: 0.16em;
-    color: $title;
-    text-transform: uppercase;
-    margin-bottom: 29px;
   }
   &__descr {
     font-weight: 600;

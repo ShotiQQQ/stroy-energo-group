@@ -1,0 +1,72 @@
+.partners__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 75px;
+  padding-bottom: 98px;
+}
+.partners__text {
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.partners__title {
+  margin-bottom: 12px;
+}
+.partners__info {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+}
+.partners__buttons {
+  margin-top: auto;
+}
+.partners__content {
+  width: 65%;
+}
+.partners__list {
+  display: flex;
+}
+.partners__item {
+  width: calc(33.3% - 8.5px);
+  min-height: 275px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #D8D8D8;
+  padding: 72px 10px 23px 10px;
+}
+.partners__item:not(:nth-child(3n)) {
+  margin-right: 25.5px;
+}
+.partners__item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 105px;
+}
+.partners__item--luzhniki {
+  padding-top: 14px;
+}
+.partners__item--luzhniki .partners__img {
+  margin-bottom: 16px;
+}
+.partners__img {
+  margin-bottom: auto;
+}
+.partners__name {
+  line-height: 21px;
+  margin-bottom: 6px;
+}
+.partners__descr {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+  text-align: center;
+}
+.partners__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  margin-top: auto;
+}

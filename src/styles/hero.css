@@ -1,18 +1,12 @@
+.hero {
+  margin-bottom: 219px;
+}
 .hero__container {
   padding-top: 181px;
   position: relative;
 }
 .hero__logo {
   margin-bottom: 32px;
-}
-.hero__title {
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 46px;
-  letter-spacing: 0.16em;
-  color: #2C3F68;
-  text-transform: uppercase;
-  margin-bottom: 29px;
 }
 .hero__descr {
   font-weight: 600;

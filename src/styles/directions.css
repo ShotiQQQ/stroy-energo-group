@@ -1,0 +1,109 @@
+.directions {
+  padding-top: 83px;
+  padding-bottom: 95px;
+}
+.directions__title {
+  margin-bottom: 57px;
+}
+.directions__content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, minmax(273px, 1fr));
+  gap: 25px;
+  grid-template-areas: "first first first second second second third third third third third third" "first first first fourth fourth fourth fourth fourth fourth fifth fifth fifth";
+}
+.directions__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 22px;
+  cursor: pointer;
+}
+.directions__card:hover::before {
+  background: linear-gradient(180.09deg, rgba(0, 0, 0, 0.5) 0.08%, rgba(0, 0, 0, 0) 75.86%);
+}
+.directions__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(180.09deg, rgba(0, 0, 0, 0.2) 0.08%, rgba(0, 0, 0, 0) 75.86%);
+  transform: rotate(-180deg);
+}
+.directions__card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  background-color: #9D9D9D;
+}
+.directions__card--1 {
+  grid-area: first;
+}
+.directions__card--2 {
+  grid-area: second;
+}
+.directions__card--2:hover::before {
+  background: none;
+}
+.directions__card--2 .directions__img {
+  top: -45px;
+  right: -40px;
+  left: auto;
+}
+.directions__card--3 {
+  grid-area: third;
+}
+.directions__card--4 {
+  grid-area: fourth;
+}
+.directions__card--5 {
+  grid-area: fifth;
+}
+.directions__card--5:hover::before {
+  background: none;
+}
+.directions__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.directions__subtitle {
+  position: relative;
+  font-size: 18px;
+  line-height: 29px;
+  margin-top: auto;
+  margin-bottom: 13px;
+  text-transform: uppercase;
+  color: #FFF;
+  z-index: 2;
+}
+.directions__descr {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFF;
+  z-index: 2;
+}
+.directions__button {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #FFF;
+  z-index: 2;
+  margin-top: 10px;
+}

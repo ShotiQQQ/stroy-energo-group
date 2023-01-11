@@ -1,3 +1,28 @@
+.header {
+  position: relative;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -318px;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, #000000 -123.77%, rgba(0, 0, 0, 0) 78.06%);
+  background-repeat: no-repeat;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -1800px;
+  left: 0;
+  z-index: -2;
+  background: linear-gradient(171.07deg, #747474 -4.41%, rgba(255, 255, 255, 0) 60.02%);
+  background-repeat: no-repeat;
+}
 .header__container {
   display: flex;
   justify-content: space-between;
