@@ -28,15 +28,15 @@
   display: flex;
 }
 .partners__item {
-  width: calc(33.3% - 8.5px);
-  min-height: 275px;
+  box-sizing: border-box;
+  width: 223px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid #D8D8D8;
   padding: 72px 10px 23px 10px;
 }
-.partners__item:not(:nth-child(3n)) {
+.partners__item:not(:last-child) {
   margin-right: 25.5px;
 }
 .partners__item-container {

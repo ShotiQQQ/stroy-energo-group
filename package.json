@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "just-validate": "^3.8.1",
+    "swiper": "^8.4.5",
     "way2enjoy-gulp": "^1.0.1"
   }
 }

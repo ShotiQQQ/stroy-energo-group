@@ -1,41 +1,25 @@
-const openModal = document.querySelector('#create_market');
-const modal = document.querySelector('.modal__create');
-const closeModal = document.querySelector('.modal__create-close');
-const cancel = document.querySelector('.modal__create-cancel');
-const createMarket = document.querySelector('.modal__create-create');
-const domain = document.querySelector('#domain');
-const selects = document.querySelectorAll('.form-select');
-const burgerOpen = document.querySelector('.burger-open');
-const burgerClose = document.querySelector('.burger-close');
-const asideMenu = document.querySelector('.aside');
+const swiperRealized = new Swiper('.realized__swiper', {
+  navigation: {
+    nextEl: '.realized__button--prev',
+    prevEl: '.realized__button--next',
+  },
+  loop: true,
+  speed: 750
+});
 
-function closingModal () {
-    modal.classList.remove('modal__create--active');
-    domain.value = '';
-    selects.forEach((e) => {
-        e.selectedIndex = 0;
-    })
-}
-function openingModal() {
-    modal.classList.add('modal__create--active');
-}
+const swiperPartners = new Swiper('.partners__swiper', {
+  navigation: {
+    nextEl: '.partners__button--next',
+    prevEl: '.partners__button--prev',
+  },
+  slidesPerView: 'auto',
+  loop: true,
+  speed: 750
+});
 
-function openAsideMenu() {
-    asideMenu.classList.add('aside--active');
-}
 
-function closeAsideMenu() {
-    asideMenu.classList.remove('aside--active');
-}
-
-openModal.addEventListener('click', openingModal);
-
-closeModal.addEventListener('click', closingModal);
-
-cancel.addEventListener('click', closingModal);
-
-createMarket.addEventListener('click', closingModal);
-
-burgerOpen.addEventListener('click', openAsideMenu);
-
-burgerClose.addEventListener('click', closeAsideMenu);
+document.querySelectorAll('form').forEach((e) => {
+  e.addEventListener('submit', (e) => {
+    e.preventDefault();
+  })
+})

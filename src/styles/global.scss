@@ -1,4 +1,4 @@
-@import "../../node_modules/normalize.css/normalize";
+@import "node_modules/normalize.css/normalize";
 @import "_vars.scss";
 @import "_mixins.scss";
 
@@ -68,6 +68,17 @@ h1 {
   color: $title;
   text-transform: uppercase;
   margin-bottom: 29px;
+  @media (max-width: 1120px) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+  @media (max-width: 910px) {
+    margin-bottom: 0;
+  }
+  @media (max-width: 570px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 h2 {
@@ -108,9 +119,13 @@ ul {
 
 .container {
   max-width: 1151px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin: 0 auto;
+  @media (max-width: 370px) {
+    padding-left: 12.5px;
+    padding-right: 12.5px;
+  }
 }
 
 .button {
@@ -120,8 +135,16 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  opacity: .35;
+  transition: opacity .3s;
+  &:hover {
+    opacity: 1;
+  }
   &--prev {
     transform: rotate(180deg);
     margin-right: 20px;
   }
+}
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  display: none;
 }

@@ -1,0 +1,221 @@
+.footer {
+  position: relative;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../img/footer_back.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center right;
+  z-index: 1;
+}
+.footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(133.19deg, #373737 25.37%, #B0B0B0 137.3%);
+  transform: rotate(180deg);
+}
+.footer__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 45px;
+  padding-bottom: 35px;
+  z-index: 2;
+}
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 36%;
+}
+.footer__logo {
+  margin-bottom: 35px;
+}
+.footer__address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-style: normal;
+  margin-bottom: 57px;
+}
+.footer__subtitle {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  margin-bottom: 1px;
+  text-transform: uppercase;
+  color: #D8D8D8;
+}
+.footer__location {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+  color: #FFF;
+  margin-bottom: 18px;
+}
+.footer__our-tel, .footer__separator, .footer__email {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+  color: #FFF;
+}
+.footer__our-tel, .footer__separator {
+  margin-right: 8px;
+}
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer__copy, .footer__policy {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 17px;
+  color: #D8D8D8;
+}
+.footer__policy {
+  position: relative;
+  margin-bottom: 17px;
+}
+.footer__policy::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  background-color: #D8D8D8;
+}
+.footer__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 57%;
+}
+.footer__title {
+  color: #FFF;
+  margin-bottom: 21px;
+}
+.footer__inputs {
+  display: flex;
+  margin-bottom: 33px;
+  width: 100%;
+}
+.footer__name {
+  position: relative;
+  width: calc(50% - 9.5px);
+  margin-right: 19px;
+}
+.footer__tel {
+  position: relative;
+  width: calc(50% - 9.5px);
+}
+.footer fieldset {
+  padding: 0 17px 12px 17px;
+  border: 1px solid #FFF;
+}
+.footer #name, .footer #tel, .footer #comment {
+  background-color: transparent;
+  width: 100%;
+  color: #FFF;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.footer #name:focus-visible + legend, .footer #tel:focus-visible + legend, .footer #comment:focus-visible + legend {
+  color: #D8D8D8;
+}
+.footer__inputs legend, .footer__comment legend {
+  color: #FFF;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 0 5px;
+  transition: color 0.3s;
+}
+.footer__comment {
+  position: relative;
+  margin-bottom: 26px;
+  width: 100%;
+}
+.footer #comment {
+  min-height: 100px;
+  resize: none;
+}
+.footer__form-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.footer__checkbox {
+  display: none;
+}
+.footer__checkbox + span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #FFF;
+  margin-right: 14px;
+}
+.footer__checkbox + span::after {
+  content: "";
+  opacity: 0;
+  width: 40%;
+  height: 40%;
+  background-color: #FFF;
+  transition: opacity 0.3s;
+}
+.footer__checkbox:checked + span::after {
+  opacity: 1;
+}
+.footer__label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFF;
+}
+.footer__send {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  background-color: #D8D8D8;
+  padding: 15px 75px;
+  color: black;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+.footer__send:hover {
+  background-color: #FFF;
+}
+.footer__rules {
+  position: relative;
+}
+.footer__rules::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  background-color: #FFF;
+}
