@@ -44,7 +44,7 @@ const preproc = () => {
   return src('src/styles/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulpif(argv.prod, sourcemaps.write()))
+    .pipe(gulpif(!argv.prod, sourcemaps.write()))
     .pipe(dest('src/styles'))
     .pipe(browserSync.stream())
 }
@@ -57,7 +57,7 @@ const styles = () => {
     cascade: false
   }))
   .pipe(gulpif(argv.prod, cleanCSS()))
-  .pipe(gulpif(argv.prod, sourcemaps.write()))
+  .pipe(gulpif(!argv.prod, sourcemaps.write()))
   .pipe(dest('dist/styles'))
   .pipe(browserSync.stream())
 }
@@ -82,7 +82,7 @@ const scripts = () => {
   }))
   .pipe(concat('app.js'))
   .pipe(gulpif(argv.prod, uglify().on('error', notify.onError())))
-  .pipe(gulpif(argv.prod, sourcemaps.write()))
+  .pipe(gulpif(!argv.prod, sourcemaps.write()))
   .pipe(dest('dist/scripts'))
   .pipe(browserSync.stream())
 }

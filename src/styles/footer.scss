@@ -15,6 +15,13 @@
     background-size: contain;
     background-position: center right;
     z-index: 1;
+    @media (max-width: 1015px) {
+      background-size: 75% 100%;
+    }
+    @media (max-width: 714px) {
+      background-position: bottom center;
+      background-size: cover;
+    }
   }
   &::after {
     content: '';
@@ -33,12 +40,31 @@
     padding-top: 45px;
     padding-bottom: 35px;
     z-index: 2;
+    @media (max-width: 960px) {
+      padding-bottom: 59px;
+    }
+    @media (max-width: 720px) {
+      padding-top: 54px;
+      padding-bottom: 45px;
+    }
+    @media (max-width: 714px) {
+      flex-direction: column;
+    }
+    @media (max-width: 450px) {
+      padding-top: 35px;
+    }
   }
   &__info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 36%;
+    @media (max-width: 714px) {
+      width: 100%;
+    }
+    @media (max-width: 450px) {
+      align-items: center;
+    }
   }
   &__logo {
     margin-bottom: 35px;
@@ -49,6 +75,9 @@
     align-items: flex-start;
     font-style: normal;
     margin-bottom: 57px;
+    @media (max-width: 450px) {
+      align-items: center;
+    }
   }
   &__subtitle {
     font-weight: 500;
@@ -58,6 +87,10 @@
     margin-bottom: 1px;
     text-transform: uppercase;
     color: $border;
+    @media (max-width: 450px) {
+      font-size: 12px;
+      line-height: 19px;
+    }
   }
   &__location {
     font-weight: 500;
@@ -65,6 +98,18 @@
     line-height: 27px;
     color: $main;
     margin-bottom: 18px;
+  }
+  &__connect {
+    @media (max-width: 440px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__separator {
+    @media (max-width: 440px) {
+      display: none;
+    }
   }
   &__our-tel, &__separator, &__email {
     font-weight: 500;
@@ -79,6 +124,18 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @media (max-width: 714px) {
+      display: none;
+    }
+    @media (max-width: 450px) {
+      align-items: center;
+    }
+    &--mobile {
+      display: none;
+      @media (max-width: 714px) {
+        display: flex;
+      }
+    }
   }
   &__copy, &__policy {
     font-weight: 500;
@@ -104,6 +161,9 @@
     flex-direction: column;
     align-items: flex-start;
     width: 57%;
+    @media (max-width: 714px) {
+      width: 100%;
+    }
   }
   &__title {
     color: $main;
@@ -113,15 +173,26 @@
     display: flex;
     margin-bottom: 33px;
     width: 100%;
+    @media (max-width: 840px) {
+      flex-direction: column;
+    }
   }
   &__name {
     position: relative;
     width: calc(50% - 9.5px);
     margin-right: 19px;
+    @media (max-width: 840px) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
   }
   &__tel {
     position: relative;
     width: calc(50% - 9.5px);
+    @media (max-width: 840px) {
+      width: 100%;
+    }
   }
   fieldset {
     padding: 0 17px 12px 17px;
@@ -137,6 +208,9 @@
     line-height: 24px;
     &:focus-visible + legend {
       color: $border;
+    }
+    &::placeholder {
+      color: #949494;
     }
   }
   &__inputs, &__comment {
@@ -163,6 +237,16 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    @media (max-width: 714px) {
+      margin-bottom: 35px;
+    }
+    @media (max-width: 540px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    @media (max-width: 450px) {
+      align-items: center;
+    }
   }
   &__checkbox {
     display: none;
@@ -195,6 +279,10 @@
     font-size: 12px;
     line-height: 18px;
     color: $main;
+    flex-wrap: wrap;
+    @media (max-width: 540px) {
+      margin-bottom: 27px;
+    }
   }
   &__send {
     font-weight: 700;
@@ -210,6 +298,12 @@
     &:hover {
       background-color: $main;
     }
+    @media (max-width: 960px) {
+      padding: 15px 49px 15px 62px;
+    }
+    @media (max-width: 840px) {
+      padding: 15px 30px;
+    }
   }
   &__rules {
     position: relative;
@@ -218,7 +312,7 @@
       position: absolute;
       height: 1px;
       right: 0;
-      bottom: 3px;
+      bottom: 1px;
       left: 0;
       background-color: $main;
     }

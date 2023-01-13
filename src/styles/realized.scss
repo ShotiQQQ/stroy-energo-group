@@ -6,11 +6,26 @@
   &__container {
     padding-top: 85px;
     padding-bottom: 76px;
+    @media (max-width: 960px) {
+      padding-top: 73px;
+      padding-bottom: 84px;
+    }
+    @media (max-width: 720px) {
+      padding-top: 59px;
+      padding-bottom: 49px;
+    }
+    @media (max-width: 450px) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
   }
   &__top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 49px;
+  }
+  &__buttons {
+    flex-shrink: 0;
   }
   &__slide {
     display: flex;
@@ -25,14 +40,44 @@
   &__img {
     width: calc(50% - 5px);
   }
+  &__pagination {
+    display: none;
+    position: relative;
+    @media (max-width: 450px) {
+      display: inline-block;
+    }
+  }
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    width: auto;
+  }
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0;
+    margin-right: 13px;
+    border-radius: 0;
+    background: $border;
+    opacity: 1;
+    width: 11px;
+    height: 11px;
+  }
+  .swiper-pagination-bullet-active {
+    background: black !important;
+  }
   &__text {
    &--top {
     display: flex;
     align-items: flex-start;
     margin-bottom: 14px;
+     @media (max-width: 720px) {
+       flex-direction: column;
+       align-items: flex-start;
+     }
    }
     &--bottom {
       display: flex;
+      @media (max-width: 720px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   }
   &__name {
@@ -42,11 +87,18 @@
     line-height: 19px;
     letter-spacing: .08em;
     text-transform: uppercase;
+    @media (max-width: 720px) {
+      margin-bottom: 6px;
+    }
   }
   &__object {
     max-width: 878px;
     font-weight: 600;
     font-size: 20px;
+    @media (max-width: 720px) {
+      font-size: 16px;
+      line-height: 25px;
+    }
   }
   &__work {
     font-weight: 500;

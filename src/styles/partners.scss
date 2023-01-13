@@ -7,12 +7,31 @@
     justify-content: space-between;
     padding-top: 75px;
     padding-bottom: 98px;
+    @media (max-width: 1158px) {
+      padding-right: 0;
+    }
+    @media (max-width: 960px) {
+      padding-top: 82px;
+      padding-bottom: 65px;
+    }
+    @media (max-width: 720px) {
+      flex-direction: column;
+      padding-top: 49px;
+      padding-bottom: 71px;
+    }
   }
   &__text {
     width: 28%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @media (max-width: 1150px) {
+      width: 30%;
+    }
+    @media (max-width: 720px) {
+      width: 100%;
+      margin-bottom: 33px;
+    }
   }
   &__title {
     margin-bottom: 12px;
@@ -24,9 +43,17 @@
   }
   &__buttons {
     margin-top: auto;
+    @media (max-width: 720px) {
+      display: none;
+    }
   }
   &__content {
-    width: 65%;
+    width: 66%;
+    margin: 0;
+    @media (max-width: 720px) {
+      width: 100%;
+      overflow: visible;
+    }
   }
   &__list {
     display: flex;
@@ -38,6 +65,7 @@
     flex-direction: column;
     align-items: center;
     border: 1px solid $border;
+    height: 275px;
     padding: 72px 10px 23px 10px;
     &:not(:last-child) {
       margin-right: 25.5px;

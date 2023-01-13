@@ -4,11 +4,25 @@
 .directions {
   padding-top: 83px;
   padding-bottom: 95px;
-  &__container {
-
+  @media (max-width: 960px) {
+    padding-top: 96px;
+    padding-bottom: 75px;
+  }
+  @media (max-width: 720px) {
+    padding-top: 52px;
+    padding-bottom: 65px;
+  }
+  @media (max-width: 450px) {
+    padding-bottom: 45px;
   }
   &__title {
     margin-bottom: 57px;
+    @media (max-width: 720px) {
+      margin-bottom: 47px;
+    }
+    @media (max-width: 450px) {
+      margin-bottom: 35px;
+    }
   }
   &__content {
     display: grid;
@@ -19,6 +33,20 @@
     "first first first second second second third third third third third third"
     "first first first fourth fourth fourth fourth fourth fourth fifth fifth fifth"
   ;
+    @media (max-width: 1024px) {
+      gap: 20px;
+    }
+    @media (max-width: 930px) {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(5, minmax(190px, 1fr));
+      grid-template-areas:
+      "first first first first first first"
+      "second second second second second second"
+      "third third third third third third"
+      "fourth fourth fourth fourth fourth fourth"
+      "fifth fifth fifth fifth fifth fifth"
+    ;
+    }
   }
   &__card {
     position: relative;
@@ -53,6 +81,9 @@
       z-index: -2;
       background-color: $bg-directions;
     }
+    @media (max-width: 1024px) {
+      padding: 19px;
+    }
     &--1 {
       grid-area: first;
     }
@@ -61,12 +92,19 @@
       &:hover {
         &::before {
           background: none;
+          @media (max-width: 930px) {
+            background: linear-gradient(180.09deg, rgba(0, 0, 0, 0.5) 0.08%, rgba(0, 0, 0, 0) 75.86%);
+          }
         }
       }
       .directions__img {
         top: -45px;
         right: -40px;
         left: auto;
+        @media (max-width: 930px) {
+          top: 0;
+          right: 0;
+        }
       }
     }
     &--3 {
@@ -80,6 +118,9 @@
       &:hover {
         &::before {
           background: none;
+          @media (max-width: 930px) {
+            background: linear-gradient(180.09deg, rgba(0, 0, 0, 0.5) 0.08%, rgba(0, 0, 0, 0) 75.86%);
+          }
         }
     }
     }
@@ -103,6 +144,15 @@
     text-transform: uppercase;
     color: $main;
     z-index: 2;
+    @media (max-width: 1024px) {
+      font-size: 16px;
+      line-height: 26px;
+    }
+    @media (max-width: 720px) {
+      font-size: 22px;
+      line-height: 35px;
+      margin-bottom: 0;
+    }
   }
   &__descr {
     position: relative;
