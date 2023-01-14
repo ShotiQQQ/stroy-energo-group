@@ -75,12 +75,12 @@ function makePopup(e) {
 cards.forEach((card) => {
   card.addEventListener('click', (e) => {
     clearPopupContainer();
-    makePopup(e)
+    makePopup(e);
   })
 });
 
 close.addEventListener('click', () => {
   popup.classList.remove('popup--active');
-  clearPopupContainer();
+  setTimeout(clearPopupContainer, 500);
 })
 
