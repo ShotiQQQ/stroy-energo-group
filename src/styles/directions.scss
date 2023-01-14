@@ -161,6 +161,14 @@
     line-height: 21px;
     color: $main;
     z-index: 2;
+    &-full {
+      display: none;
+      &--indent {
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+      }
+    }
   }
   &__button {
     position: relative;

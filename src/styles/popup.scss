@@ -2,24 +2,34 @@
 @import "mixins";
 
 .popup {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   position: fixed;
   top: 0;
-  bottom: 0;
   right: 0;
   width: 100%;
+  height: 100vh;
   max-width: 776px;
   background-color: $main;
   z-index: 10;
   transform: translateX(100vw);
   transition: transform .5s;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $border;
+    border-radius: 7px;
+    margin-right: 23px;
+  }
   &--active {
     transform: translateX(0);
   }
   &__container {
-    padding: 0 35px;
+    width: 100%;
+    height: 100%;
   }
   &__close {
     position: absolute;
@@ -31,16 +41,89 @@
     height: 23px;
     top: 21px;
     right: 18px;
+    z-index: 2;
   }
   &__line {
-    background-color: black;
+    background-color: $main;
     width: 100%;
-    height: 4px;
+    height: 3px;
     &--1 {
       transform: translateY(10px) rotate(45deg);
     }
     &--2 {
-      transform: translateY(-9px) rotate(-45deg);
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+  &__img {
+    width: 100%;
+    position: relative;
+    height: 21%;
+    margin-bottom: 48px;
+    bottom: auto;
+  }
+  &__title {
+    margin-bottom: 13px;
+    padding: 0 35px;
+    color: black;
+    text-transform: lowercase;
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+  &__descr {
+    display: block;
+    padding: 0 35px;
+    color: $text-dark;
+    line-height: 27px;
+    overflow-y: auto;
+    margin-bottom: 59px;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $border;
+      border-radius: 7px;
+      margin-right: 23px;
+    }
+  }
+  .form {
+    background-color: $bg-realized;
+    width: 100%;
+    min-height: 37%;
+    color: black;
+    padding: 50px 40px;
+    &__title {
+      color: black;
+    }
+    fieldset {
+      border-color: black;
+    }
+    #name, #tel, #comment {
+      color: black;
+    }
+    legend {
+      color: black;
+    }
+    &__checkbox + span {
+      border-color: black;
+      &::after {
+        background-color: black;
+      }
+    }
+    &__label {
+      color: black;
+    }
+    &__send {
+      background-color: $title;
+      color: $main;
+    }
+    &__rules {
+      &::after {
+        background-color: black;
+      }
     }
   }
 }
